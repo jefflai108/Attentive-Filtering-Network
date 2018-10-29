@@ -12,15 +12,10 @@ An attacker may use a variety of techniques to fool an automatic speaker verific
 TO DO 
 
 ## Visualization of attention heatmaps with different non-linearities
-original 
-![alt text](github_image/original)
 ![original](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/original.png)
 
-sigmoid 
-![alt text](https://github.com/jefflai108/Attentive-Filtering-Network.git/github_image/sigmoid)
+![sigmoid](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/sigmoid.png)
 
-softmaxF (softmax on feature dimension)
-![alt text](https://github.com/jefflai108/Attentive-Filtering-Network.git/github_image/softmaxF)
+![softmaxF (softmax on feature dimension)](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/softmaxF.png)
 
-softmaxT (softmax on time dimension)
-![alt text](https://github.com/jefflai108/Attentive-Filtering-Network.git/github_image/softmaxT)
+![softmaxT (softmax on time dimension)](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/softmaxT.png)
