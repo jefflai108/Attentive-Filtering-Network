@@ -14,6 +14,7 @@ TO DO
 ## Visualization of attention heatmaps with different non-linearities
 original 
 ![alt text](github_image/original)
+![original](github_image/original)
 
 sigmoid 
 ![alt text](https://github.com/jefflai108/Attentive-Filtering-Network.git/github_image/sigmoid)
