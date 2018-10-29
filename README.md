@@ -1,5 +1,5 @@
 # Attentive Filtering Network
-University of Edinbrugh-Johns Hopkins University's system for ASVspoof 2017 Version 2.0 dataset. Work is in submission for ICASSP 2019.
+University of Edinbrugh-Johns Hopkins University's system for ASVspoof 2017 Version 2.0 dataset. Work is under review for ICASSP 2019.
 
 
 paper on ArXiv: TO DO 
