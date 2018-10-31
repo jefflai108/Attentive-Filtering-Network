@@ -25,3 +25,7 @@ softmaxF (softmax on feature dimension)
 
 softmaxT (softmax on time dimension)
 ![softmaxT (softmax on time dimension)](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/softmaxT.png)
+
+## Contact 
+Cheng-I Jeff Lai: jefflai108@gmail.com
+
