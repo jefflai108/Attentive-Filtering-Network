@@ -2,8 +2,10 @@
 This repository contains codes to reproduce the core results from our ICASSP 2019 paper: 
 * [Attentive Filtering Networks for Audio Replay Attack Detection](https://arxiv.org/abs/1810.13048)
  
-<img src="github_image/attention_filter_network.png" width="40%">
- 
+<p align="center">
+ <img src="github_image/attention_filter_network.png" width="40%">
+</p>
+
 If you find the code useful, please cite
 ```
 @inproceedings{lai2018attentive,
