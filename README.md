@@ -22,18 +22,18 @@ An attacker may use a variety of techniques to fool an automatic speaker verific
 ## Single Model Benchmark Results
 Note: Results are on the ASVspoof 2017 Version 2.0 Dataset. Each result is averaged over 8 separate runs. 
 
-|            Model             | dev EER (%) | eval EER (%) | 
-| :--------------------------: | :---------: | :----------: | 
-| Attentive Filtering Network  |    6.55     |     8.99     |      
-|   Dilated Residual Network   |    7.49     |    10.16     |   
-|   Modulation Dynamic Features|    -        |   **6.32**   | 
-| qDFTspec                     |    -        |    11.43     | 
-| CQCC-GMM(CMVN)               |    9.06     |    12.24     | 
-| i-vectors (cosine similarity)|    8.99     |    14.77     | 
-| i-vectors (Gaussian class.)  |    8.81     |    15.11     | 
-| Light CNN                    |  **6.47**   |    16.08     | 
-| Evolving RNN                 |   18.70     |    18.20     | 
-| CQCC-GMM                     |   12.08     |    29.35     | 
+|            Model             | dev EER (%) | eval EER (%) |  Diff  | 
+| :--------------------------: | :---------: | :----------: |  :--:  |
+| Attentive Filtering Network  |    6.55     |     8.99     |**2.44**|
+|   Dilated Residual Network   |    7.49     |    10.16     |  2.67  |
+|   Modulation Dynamic Features|    -        |   **6.32**   |  -     |
+| qDFTspec                     |    -        |    11.43     |  -     |
+| CQCC-GMM(CMVN)               |    9.06     |    12.24     |  3.18  |
+| i-vectors (cosine similarity)|    8.99     |    14.77     |  5.78  |
+| i-vectors (Gaussian class.)  |    8.81     |    15.11     |  6.30  |
+| Light CNN                    |  **6.47**   |    16.08     |  9.61  |
+| Evolving RNN                 |   18.70     |    18.20     |  -0.50 |
+| CQCC-GMM                     |   12.08     |    29.35     |  17.27 |
 
 
 ## Visualization of attention heatmaps with different non-linearities
