@@ -49,7 +49,7 @@ This project uses Python 2.7. Before running the code, you have to install
 
 ## Model Training 
 ```
-python ./run.sh 0
+./run.sh 0
 ```
 Note: 
 1. main.py contains detials of the training details and configurations
@@ -57,12 +57,12 @@ Note:
 
 ## Visualizing Attention
 ```
-python ./run.sh 1
+./run.sh 1
 ```
 
 ## Model Forward Passing
 ```
-python ./run.sh 2
+./run.sh 2
 ```
 
 ## Authors 
