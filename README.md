@@ -34,7 +34,7 @@ softmaxF (softmax on feature dimension)
 softmaxT (softmax on time dimension)
 ![softmaxT (softmax on time dimension)](github_image/softmaxT.png)
 
-# Dependencies
+## Dependencies
 This project uses Python 2.7. Before running the code, you have to install
 * [PyTorch 0.4](https://pytorch.org/)
 * [Kaldi](https://github.com/kaldi-asr/kaldi)
