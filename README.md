@@ -1,8 +1,7 @@
 # Attentive Filtering Network
-University of Edinbrugh-Johns Hopkins University's system for ASVspoof 2017 Version 2.0 dataset. Published in ICASSP 2019.
-
-Read [our paper](https://arxiv.org/abs/1810.13048) for more details. 
-
+This repository contains codes to reproduce the core results from our ICASSP 2019 paper: 
+* [Attentive Filtering Networks for Audio Replay Attack Detection](https://arxiv.org/abs/1810.13048)
+ 
 If you find the code useful, please cite
 ```
 @inproceedings{lai2018attentive,
@@ -30,11 +29,11 @@ softmaxF (softmax on feature dimension)
 softmaxT (softmax on time dimension)
 ![softmaxT (softmax on time dimension)](https://github.com/jefflai108/Attentive-Filtering-Network/raw/master/github_image/softmaxT.png)
 
-## ASVspoof 2017 Challenge & Dataset
-http://www.asvspoof.org/index2017.html
+# Dependencies
+This project uses Python 2.7. Before running the code, you have to install
 
-## Getting Started 
-1. Prerequisites: PyTorch 0.4
+## Getting Started
+1. Download the [ASVspoof 2017 Dataset](http://www.asvspoof.org/index2017.html)
 2. run.sh contains examples of training the networks on GPU 
 3. main.py contains detials of the training details and configurations
 4. src/attention_neuro/simple_attention_network.py contains the implementation of Attentive Filtering Network.
