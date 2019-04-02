@@ -66,6 +66,6 @@ Note:
 ```
 
 ## Authors 
-[Cheng-I Lai](jefflai108@gmail.com), [Alberto Abad](https://www.l2f.inesc-id.pt/w/Alberto_Abad_Gareta), Korin Richmond, [Junichi Yamagishi](https://nii-yamagishilab.github.io), [Najim Dehak](https://engineering.jhu.edu/ece/faculty/najim-dehak/), [Simon King](http://homepages.inf.ed.ac.uk/simonk/)
+Cheng-I Lai, [Alberto Abad](https://www.l2f.inesc-id.pt/w/Alberto_Abad_Gareta), Korin Richmond, [Junichi Yamagishi](https://nii-yamagishilab.github.io), [Najim Dehak](https://engineering.jhu.edu/ece/faculty/najim-dehak/), [Simon King](http://homepages.inf.ed.ac.uk/simonk/)
 
 If you encouter any problem, feel free to contact me. 
