@@ -19,6 +19,18 @@ If you find the code useful, please cite
 ## Abstract 
 An attacker may use a variety of techniques to fool an automatic speaker verification system into accepting them as a genuine user. Anti-spoofing methods meanwhile aim to make the system robust against such attacks. The ASVspoof 2017 Challenge focused specifically on replay attacks, with the intention of measuring the limits of replay attack detection as well as developing countermeasures8.pdf against them. In this work, we propose our replay attacks detection system - Attentive Filtering Network, which is composed of an attention-based filtering mechanism that enhances feature representations in both the frequency and time domains, and a ResNet-based classifier. We show that the network enables us to visualize the automatically acquired feature representations that are helpful for spoofing detection. Attentive Filtering Network attains an evaluation EER of 8.99% on the ASVspoof 2017 Version 2.0 dataset. With system fusion, our best system further obtains a 30% relative improvement over the ASVspoof 2017 enhanced baseline system.
 
+## Single Model Benchmark Results
+Note: Results are on the ASVspoof 2017 Version 2.0 Dataset. 
+
+|            Model            | dev EER (%) | eval EER (%) | 
+| :-------------------------: | :-------------: | :------------: | 
+| Attentive Filtering Network |    6.55    |     8.99     |       0.0       |       0.0      |
+|        Dilated ResNet       |     0.02377     |     0.7798     |       0.0       |       0.0      |
+|        Mean-Std ResNet      |     0.022       |     0.832      |       0.0       |       0.0      |
+|          CQCC-GMM           |     0.195       |     9.87       |       0.012     |       0.43     |  
+|          LFCC-GMM           |     0.255       |    11.96       |       0.066     |       2.71     |
+|       100-i-vectors         |     0.306       |    12.37       |       0.155     |       5.18     |
+|       200-i-vectors         |     0.322       |    12.52       |       0.121     |       4.12     |
 
 ## Visualization of attention heatmaps with different non-linearities
 sigmoid
