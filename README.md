@@ -22,7 +22,7 @@ An attacker may use a variety of techniques to fool an automatic speaker verific
 
 
 ## Visualization of attention heatmaps with different non-linearities
-<center>Sigmoid</center>
+sigmoid
 ![sigmoid](github_image/sigmoid.png)
 
 tanh
