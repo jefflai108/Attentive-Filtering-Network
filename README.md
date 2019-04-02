@@ -1,6 +1,5 @@
 # Attentive Filtering Network
-This repository contains codes to reproduce the core results from our ICASSP 2019 paper: 
-* [Attentive Filtering Networks for Audio Replay Attack Detection](https://arxiv.org/abs/1810.13048)
+This repository contains codes to reproduce the core results from our ICASSP 2019 paper: [Attentive Filtering Networks for Audio Replay Attack Detection](https://arxiv.org/abs/1810.13048)
  
 <p align="center">
  <img src="github_image/attention_filter_network.png" width="40%">
