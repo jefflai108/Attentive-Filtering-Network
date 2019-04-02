@@ -1,7 +1,18 @@
 # Attentive Filtering Network
-University of Edinbrugh-Johns Hopkins University's system for ASVspoof 2017 Version 2.0 dataset. Accepted to ICASSP 2019.
+University of Edinbrugh-Johns Hopkins University's system for ASVspoof 2017 Version 2.0 dataset. Published in ICASSP 2019.
 
 Read [our paper](https://arxiv.org/abs/1810.13048) for more details. 
+
+If you find the code useful, please cite
+```
+@inproceedings{lai2018attentive,
+  title={Attentive Filtering Networks for Audio Replay Attack Detection},
+  author={Lai, Cheng-I and Abad, Alberto and Richmond, Korin and Yamagishi, Junichi and Dehak, Najim and King, Simon},
+  booktitle={2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2019},
+  organization={IEEE}
+}
+```
 
 ## Abstract 
 An attacker may use a variety of techniques to fool an automatic speaker verification system into accepting them as a genuine user. Anti-spoofing methods meanwhile aim to make the system robust against such attacks. The ASVspoof 2017 Challenge focused specifically on replay attacks, with the intention of measuring the limits of replay attack detection as well as developing countermeasures against them. In this work, we propose our replay attacks detection system - Attentive Filtering Network, which is composed of an attention-based filtering mechanism that enhances feature representations in both the frequency and time domains, and a ResNet-based classifier. We show that the network enables us to visualize the automatically acquired feature representations that are helpful for spoofing detection. Attentive Filtering Network attains an evaluation EER of 8.99% on the ASVspoof 2017 Version 2.0 dataset. With system fusion, our best system further obtains a 30% relative improvement over the ASVspoof 2017 enhanced baseline system.
