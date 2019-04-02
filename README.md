@@ -33,15 +33,30 @@ softmaxT (softmax on time dimension)
 
 # Dependencies
 This project uses Python 2.7. Before running the code, you have to install
+* [PyTorch 0.4](https://pytorch.org/)
+* [Kaldi](https://github.com/kaldi-asr/kaldi)
 
-## Getting Started
+## Getting Started 
 1. Download the [ASVspoof 2017 Dataset](http://www.asvspoof.org/index2017.html)
-2. run.sh contains examples of training the networks on GPU 
-3. main.py contains detials of the training details and configurations
-4. src/attention_neuro/simple_attention_network.py contains the implementation of Attentive Filtering Network.
+2. Extract features with [Kaldi](https://github.com/kaldi-asr/kaldi)
+3. Change the argumenents in run.sh and point them to your feature files. 
+
+## Model Training 
+```
+python ./run.sh 0
+```
+1. main.py contains detials of the training details and configurations
+2. src/attention_neuro/simple_attention_network.py contains the implementation of Attentive Filtering Network.
+
+## Visualizing Attention
+```
+python ./run.sh 1
+```
+
+## Model Forward Passing
+```
+python ./run.sh 2
+```
 
 ## Authors 
-Cheng-I Lai, [Alberto Abad](https://www.l2f.inesc-id.pt/w/Alberto_Abad_Gareta), Korin Richmond, [Junichi Yamagishi](https://nii-yamagishilab.github.io), Najim Dehak, [Simon King](http://homepages.inf.ed.ac.uk/simonk/)
-
-## Contact 
-Cheng-I Jeff Lai: jefflai108@gmail.com
+[Cheng-I Lai](jefflai108@gmail.com), [Alberto Abad](https://www.l2f.inesc-id.pt/w/Alberto_Abad_Gareta), Korin Richmond, [Junichi Yamagishi](https://nii-yamagishilab.github.io), Najim Dehak, [Simon King](http://homepages.inf.ed.ac.uk/simonk/)
