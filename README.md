@@ -66,4 +66,4 @@ python ./run.sh 2
 ## Authors 
 [Cheng-I Lai](jefflai108@gmail.com), [Alberto Abad](https://www.l2f.inesc-id.pt/w/Alberto_Abad_Gareta), Korin Richmond, [Junichi Yamagishi](https://nii-yamagishilab.github.io), Najim Dehak, [Simon King](http://homepages.inf.ed.ac.uk/simonk/)
 
-If you encoutered problems, feel free to contact me. 
+If you encouter any problem, feel free to contact me. 
