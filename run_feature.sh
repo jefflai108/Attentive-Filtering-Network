@@ -16,58 +16,58 @@ ivector_dim=200 # ivector
 
 if [ $stage -eq 0 ]; then
     # cqcc_spectrogram (863) feature extraction
-    # apply cmvn sliding window 
+    # apply cmvn sliding window
     for name in train dev eval; do
       utils/fix_data_dir.sh data/${name}_cqcc_spectrogram
       utils/copy_data_dir.sh data/${name}_cqcc_spectrogram data/${name}_cqcc_spectrogram_cmvn
       feats="ark:apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:`pwd`/data/${name}_cqcc_spectrogram/feats.scp ark:- |"
       copy-feats "$feats" ark,scp:`pwd`/data/${name}_cqcc_spectrogram_cmvn/feats.ark,`pwd`/data/${name}_cqcc_spectrogram_cmvn/feats.scp
-done 
-fi 
+done
+fi
 
 if [ $stage -eq -6 ]; then
     # fbank (40) feature extraction
-    # apply cmvn sliding window 
+    # apply cmvn sliding window
     for name in train dev eval train_dev; do
       utils/fix_data_dir.sh data/${name}
       utils/copy_data_dir.sh data/${name} data/${name}_fbank
       steps/make_fbank.sh --fbank-config conf/fbank.conf --nj 40 --cmd "$train_cmd" \
 	data/${name}_fbank exp/make_fbank $fbankdir
-     
+
       utils/copy_data_dir.sh data/${name}_fbank data/${name}_fbank_cmvn
       feats="ark:apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:`pwd`/data/${name}_fbank/feats.scp ark:- |"
       copy-feats "$feats" ark,scp:`pwd`/data/${name}_fbank_cmvn/feats.ark,`pwd`/data/${name}_fbank_cmvn/feats.scp
-done 
-fi 
+done
+fi
 
 if [ $stage -eq -5 ]; then
     # logspec (257) feature extraction
-    # apply cmvn sliding window 
+    # apply cmvn sliding window
     for name in train dev eval train_dev; do
       #utils/copy_data_dir.sh data/${name}_spec data/${name}_spec_cmvn
       feats="ark:apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:`pwd`/data/${name}_spec/feats.scp ark:- |"
       copy-feats "$feats" ark,scp:`pwd`/data/${name}_spec_cmvn/feats.ark,`pwd`/data/${name}_spec_cmvn/feats.scp
     done
-fi 
+fi
 
 if [ $stage -eq -4 ]; then
     # logspec (257) feature extraction
     for name in train dev eval train_dev; do
       utils/fix_data_dir.sh data/${name}
       utils/copy_data_dir.sh data/${name} data/${name}_spec
-      
+
       local/make_spectrogram.sh --fbank-config conf/spec.conf --nj 40 --cmd "$train_cmd" \
           data/${name}_spec exp/make_spec $specdir
     done
-fi 
+fi
 
 if [ $stage -eq -3 ]; then
     # logspec (257) feature extraction
-    # apply vad 
+    # apply vad
     for name in train dev eval train_dev; do
       utils/fix_data_dir.sh data/${name}
       utils/copy_data_dir.sh data/${name} data/${name}_spec
-      
+
       local/make_spectrogram.sh --fbank-config conf/spec.conf --nj 40 --cmd "$train_cmd" \
           data/${name}_spec exp/make_spec $specdir
       sid/compute_vad_decision.sh --nj 5 --cmd "$train_cmd" \
@@ -76,15 +76,15 @@ if [ $stage -eq -3 ]; then
       feats="ark:select-voiced-frames scp:`pwd`/data/${name}_spec/feats.scp scp:`pwd`/data/${name}_spec/vad.scp ark:- |"
       copy-feats "$feats" ark,scp:`pwd`/data/${name}_spec_vad/feats.ark,`pwd`/data/${name}_spec_vad/feats.scp
     done
-fi 
+fi
 
 if [ $stage -eq -2 ]; then
     # logspec (257) feature extraction
-    # apply vad --> cmvn sliding window 
+    # apply vad --> cmvn sliding window
     for name in train dev eval train_dev; do
       utils/fix_data_dir.sh data/${name}
       utils/copy_data_dir.sh data/${name} data/${name}_spec
-      
+
       local/make_spectrogram.sh --fbank-config conf/spec.conf --nj 40 --cmd "$train_cmd" \
           data/${name}_spec exp/make_spec $specdir
       sid/compute_vad_decision.sh --nj 5 --cmd "$train_cmd" \
@@ -93,7 +93,7 @@ if [ $stage -eq -2 ]; then
       feats="ark:select-voiced-frames scp:`pwd`/data/${name}_spec/feats.scp scp:`pwd`/data/${name}_spec/vad.scp ark:- | apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 ark:- ark:- |"
       copy-feats "$feats" ark,scp:`pwd`/data/${name}_spec_vad_cmvn/feats.ark,`pwd`/data/${name}_spec_vad_cmvn/feats.scp
     done
-fi 
+fi
 
 if [ $stage -eq -1 ]; then
     # feature extraction
@@ -102,7 +102,7 @@ if [ $stage -eq -1 ]; then
     # Create a copy of data/train,dev,eval,train_dev for MFCC, Fbank & PLP
     for name in train dev eval train_dev; do
       utils/fix_data_dir.sh data/${name}
-      
+
       # mfcc
       utils/copy_data_dir.sh data/${name} data/${name}_mfcc
       steps/make_mfcc.sh --mfcc-config conf/mfcc.conf --nj 40 --cmd "$train_cmd" \
